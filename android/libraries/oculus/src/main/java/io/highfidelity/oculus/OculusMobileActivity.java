@@ -30,9 +30,9 @@ public class OculusMobileActivity extends QtActivity implements SurfaceHolder.Ca
     private native static void nativeOnPause();
     private native static void nativeOnSurfaceChanged(Surface s);
 
-    private native void questNativeOnCreate();
+    //private native void questNativeOnCreate();
     private native void questNativeOnPause();
-    private native void questNativeOnResume();
+    //private native void questNativeOnResume();
     private native void questOnAppAfterLoad();
 
     private native void questNativeAwayMode();
@@ -55,7 +55,7 @@ public class OculusMobileActivity extends QtActivity implements SurfaceHolder.Ca
         mView.getHolder().addCallback(this);
 
         nativeOnCreate(getAssets());
-        questNativeOnCreate();
+        //questNativeOnCreate();
     }
 
     public void onAppLoadedComplete() {
@@ -84,7 +84,7 @@ public class OculusMobileActivity extends QtActivity implements SurfaceHolder.Ca
         //Reconnect the global reference back to handler
         nativeOnCreate(getAssets());
 
-        questNativeOnResume();
+        //questNativeOnResume();
         nativeOnResume();
         isPausing=false;
     }

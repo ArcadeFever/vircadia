@@ -14,13 +14,13 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:4.1.1'
     }
 }
 
 plugins {
     id 'de.undercouch.download' version '3.3.0'
-    id "cz.malohlava" version "1.0.3"
+//    id "cz.malohlava" version "1.0.3"
     id "io.github.http-builder-ng.http-plugin" version "0.1.1"
 }
 
@@ -38,7 +38,7 @@ task clean(type: Delete) {
 
 ext {
     RELEASE_NUMBER = project.hasProperty('RELEASE_NUMBER') ? project.getProperty('RELEASE_NUMBER') : '0'
-    VERSION_CODE = project.hasProperty('VERSION_CODE') ? project.getProperty('VERSION_CODE') : '0'
+    VERSION_CODE = project.hasProperty('VERSION_CODE') ? project.getProperty('VERSION_CODE') : '1'
     RELEASE_TYPE = project.hasProperty('RELEASE_TYPE') ? project.getProperty('RELEASE_TYPE') : 'DEV'
     STABLE_BUILD = project.hasProperty('STABLE_BUILD') ? project.getProperty('STABLE_BUILD') : '0'
     EXEC_SUFFIX = Os.isFamily(Os.FAMILY_WINDOWS) ? '.exe' : ''
